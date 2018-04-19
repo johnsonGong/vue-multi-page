@@ -6,7 +6,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     // 用户名
-    userName: ''
+    userName: 'gong'
   },
   mutations: {
     /**

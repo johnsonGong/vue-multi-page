@@ -2,7 +2,7 @@
   <div>
     <div class="vux-demo">
       <img class="logo" src="../assets/vux_logo.png">
-      <h1> {{ msg }}</h1>
+      <h1> </h1>
     </div>
     <group title="cell demo">
       <cell title="VUX" value="cool" is-link></cell>
@@ -11,23 +11,23 @@
 </template>
 
 <script>
-import { Group, Cell } from 'vux'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+import { Group, Cell } from 'vux'
 
 export default {
   components: {
     Group,
-    Cell{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
+    Cell
   },
-  data{{#unless_eq lintConfig "airbnb"}} {{/unless_eq}}() {
+  data () {
     return {
       // note: changing this line won't causes changes
       // with hot-reload because the reloaded component
       // preserves its current state and we are modifying
       // its initial state.
-      msg: 'Hello World!'{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
-    }{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-  }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
-}{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+      msg: 'Hello World!'
+    }
+  }
+}
 </script>
 
 <style>

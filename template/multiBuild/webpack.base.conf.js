@@ -1,22 +1,27 @@
 'use strict'
 const path = require('path')
 const utils = require('./utils')
-const config = require('../config')
+const config = require('../multiConfig')
 const vueLoaderConfig = require('./vue-loader.conf')
 const vuxLoader = require('vux-loader')
 
 function resolve (dir) {
+    // __dirname 是被执行的js 文件的地址
   return path.join(__dirname, '..', dir)
 }
 
 let webpackConfig = {
+    // absolute path
   context: path.resolve(__dirname, '../'),
   entry: {
-    app: './src/main.js'
+    // app: './src/main.js'
+    school: './src/apps/school/index.js',
+    teacher: './src/apps/teacher/index.js'
   },
   output: {
     path: config.build.assetsRoot,
-    filename: '[name].js',
+    filename: 'pages/[name].js',
+    chunkFilename: 'pages/[name].js',
     publicPath: process.env.NODE_ENV === 'production'
       ? config.build.assetsPublicPath
       : config.dev.assetsPublicPath
@@ -26,6 +31,7 @@ let webpackConfig = {
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
+      '@apps': resolve('src/apps')
     }
   },
   module: {
