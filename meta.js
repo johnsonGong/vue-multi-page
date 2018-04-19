@@ -45,7 +45,6 @@ module.exports = {
       "message": "Install vue-router?"
     },
     "vuex": {
-      "when": 'isNotTest',
       "type": 'confirm',
       "message": 'Do you wanner install VUEX?'
     },
