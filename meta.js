@@ -12,13 +12,13 @@ module.exports = {
     "name": {
       "type": "string",
       "required": true,
-      "message": "Project name"
+      "message": "[dz frontEnd] Project name"
     },
     "description": {
       "type": "string",
       "required": false,
       "message": "Project description",
-      "default": "A Vue.js project"
+      "default": "dz vue multi page."
     },
     "author": {
       "type": "string",
@@ -43,6 +43,11 @@ module.exports = {
     "router": {
       "type": "confirm",
       "message": "Install vue-router?"
+    },
+    "vuex": {
+      "when": 'isNotTest',
+      "type": 'confirm',
+      "message": 'Do you wanner install VUEX?'
     },
     "lint": {
       "type": "confirm",
@@ -113,7 +118,8 @@ module.exports = {
     "test/unit/specs/index.js": "unit && runner === 'karma'",
     "test/unit/setup.js": "unit && runner === 'jest'",
     "test/e2e/**/*": "e2e",
-    "src/router/**/*": "router"
+    "src/router/**/*": "router",
+    'src/store/**/*': 'vuex',  //加入自己的目录
   },
   "completeMessage": "To get started:\n\n  {{^inPlace}}cd {{destDirName}}\n  {{/inPlace}}npm install\n  npm run dev\n\nDocumentation can be found at https://vuejs-templates.github.io/webpack"
 };

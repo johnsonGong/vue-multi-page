@@ -56,8 +56,8 @@ vue init johnsonGong/vue-multi-page demo
 
 
 # 参考资料
-    > 1.vux[官方模板](https://github.com/airyland/vux2)
+   - 1.vux[官方模板](https://github.com/airyland/vux2)
 
-    > 2.webpack [官方文档](https://webpack.js.org/configuration/)
+   - 2.webpack [官方文档](https://webpack.js.org/configuration/)
 
-    > 3.网络资料, 比如: [自动化构建](https://blog.csdn.net/Wbiokr/article/details/77200095), [生产环境与开发环境](https://blog.csdn.net/wbiokr/article/details/77199909)
+   - 3.网络资料, 比如: [自动化构建](https://blog.csdn.net/Wbiokr/article/details/77200095), [生产环境与开发环境](https://blog.csdn.net/wbiokr/article/details/77199909)
