@@ -24,6 +24,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     host: process.env.HOST || config.dev.host,
     port: process.env.PORT || config.dev.port,
     open: config.dev.autoOpenBrowser,
+    openPage: 'apps/school/index.html', // TODO -- add menu.html
     overlay: config.dev.errorOverlay ? {
       warnings: false,
       errors: true,
@@ -86,7 +87,9 @@ module.exports = new Promise((resolve, reject) => {
       // Add FriendlyErrorsPlugin
       devWebpackConfig.plugins.push(new FriendlyErrorsPlugin({
         compilationSuccessInfo: {
-          messages: [`Your application is running here: http://${config.dev.host}:${port}`],
+          // messages: [`Your application is running here: http://${config.dev.host}:${port}/apps/school/index.html`],
+          messages: [`Your application is running here: http://${config.dev.host}:${port}/apps/school/index.html`],
+          notes: ['dz科技--多页面开发成功启动!']
         },
         onErrors: config.dev.notifyOnErrors
         ? utils.createNotifierCallback()

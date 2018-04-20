@@ -44,10 +44,10 @@ module.exports = {
       "type": "confirm",
       "message": "Install vue-router?"
     },
-    "vuex": {
-      "type": 'confirm',
-      "message": 'Do you wanner install VUEX?'
-    },
+    // "vuex": {
+    //   "type": 'confirm',
+    //   "message": 'Do you wanner install VUEX?'
+    // },
     "lint": {
       "type": "confirm",
       "message": "Use ESLint to lint your code?"
@@ -118,7 +118,7 @@ module.exports = {
     "test/unit/setup.js": "unit && runner === 'jest'",
     "test/e2e/**/*": "e2e",
     "src/router/**/*": "router",
-    'src/store/**/*': 'vuex',  //加入自己的目录
+    // 'src/store/**/*': 'vuex',  //加入自己的目录
   },
   "completeMessage": "To get started:\n\n  {{^inPlace}}cd {{destDirName}}\n  {{/inPlace}}npm install\n  npm run dev\n\nDocumentation can be found at https://vuejs-templates.github.io/webpack"
 };
