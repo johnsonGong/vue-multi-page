@@ -11,8 +11,8 @@
     "build": "node build/build.js",
 
     "multiDev": "webpack-dev-server --inline --progress --config multiBuild/webpack.dev.conf.js",
-    "multistart": "npm run multiDev",
-    "multibuild": "node multiBuild/build.js"
+    "mstart": "npm run multiDev",
+    "mbuild": "node multiBuild/build.js"
   },
   "dependencies": {
     "vux": "^2.2.0",
