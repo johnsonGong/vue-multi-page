@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="">
       <p>This is School Detail Page!</p>
-      <p>{{msg}}</p>
+      <p></p>
   </div>
 </template>
 

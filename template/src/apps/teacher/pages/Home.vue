@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="">
       <p>This is 教师端 Home Page!</p>
-      <p>{{msg}}</p>
+      <img src="/static/imagesTeacher/01_teacher.png" alt="">
   </div>
 </template>
 

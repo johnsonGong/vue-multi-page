@@ -24,7 +24,8 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     host: process.env.HOST || config.dev.host,
     port: process.env.PORT || config.dev.port,
     open: config.dev.autoOpenBrowser,
-    openPage: 'apps/school/index.html', // TODO -- add menu.html
+    // openPage: 'apps/school/index.html', // TODO -- add menu.html
+    openPage: '_menu.html', // TODO -- add menu.html
     overlay: config.dev.errorOverlay ? {
       warnings: false,
       errors: true,
@@ -72,6 +73,29 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     })
   ]
 })
+
+var pages = [
+    {url: '/apps/school/index.html', name: '学校端'},
+    {url: '/apps/teacher/index.html', name: '教师端'}
+]
+var links = []
+for (var i = 0, len = pages.length; i < len; i++) {
+    links.push(`<li><a target="_blank" href="${pages[i].url}">${i}-${pages[i].name}</a></li>`)
+}
+
+devWebpackConfig.plugins.push(new HtmlWebpackPlugin({
+  filename: '_menu.html',
+  templateContent: function() {
+      return `<!DOCTYPE html><html>
+      <style></style>
+      <head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>目录</title><meta name="no-need-script">
+      </head><body><div>
+      <ul>${links.join('')}</ul>
+      </body></html>`
+  },
+  inject: true
+}))
 
 module.exports = new Promise((resolve, reject) => {
   portfinder.basePort = process.env.PORT || config.dev.port

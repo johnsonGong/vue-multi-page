@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@apps/school/pages/Home'
-import Detail from '@apps/school/pages/Detail'
+import Home from '@school/pages/Home'
+import Detail from '@school/pages/Detail'
 
 Vue.use(Router)
 

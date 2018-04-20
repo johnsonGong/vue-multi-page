@@ -1,7 +1,8 @@
 <template lang="html">
   <div class="">
       <p>This is School Home Page!</p>
-      <p>{{msg}}</p>
+      <p></p>
+      <img src="/static/imagesSchool/02_school.png" alt="">
   </div>
 </template>
 
