@@ -24,8 +24,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     host: process.env.HOST || config.dev.host,
     port: process.env.PORT || config.dev.port,
     open: config.dev.autoOpenBrowser,
-    // openPage: 'apps/school/index.html', // TODO -- add menu.html
-    openPage: '_menu.html', // TODO -- add menu.html
+    openPage: '_menu.html',
     overlay: config.dev.errorOverlay ? {
       warnings: false,
       errors: true,
@@ -94,7 +93,7 @@ devWebpackConfig.plugins.push(new HtmlWebpackPlugin({
       <ul>${links.join('')}</ul>
       </body></html>`
   },
-  inject: true
+  inject: false
 }))
 
 module.exports = new Promise((resolve, reject) => {
